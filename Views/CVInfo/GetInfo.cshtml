@@ -1,0 +1,185 @@
+﻿@model IEnumerable<MyCVInfo>
+@{
+    ViewData["Title"] = "My CV Information";
+}
+
+@foreach (var item in Model)
+{
+    <center>
+        <h4>
+            @Html.DisplayFor(Model => item.Name)
+        </h4>
+        <h6>
+            Mobile:@Html.DisplayFor(Model => item.MobileNumber)
+        </h6>
+        E-mail:@Html.DisplayFor(Model => item.Email)
+
+    </center>
+    <hr />
+    <Bold>
+        <h6>
+            PROFESSIONAL SUMMARY
+        </h6>
+    </Bold>
+    <ul>
+        <li>
+            @Html.DisplayFor(Model => item.ProfessionalSummary[0])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.ProfessionalSummary[1])
+
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.ProfessionalSummary[2])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.ProfessionalSummary[3])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.ProfessionalSummary[4])
+        </li>
+    </ul>
+    <hr />
+    <Bold>
+        <h6>
+            WORK HISTORY
+        </h6>
+    </Bold>
+    <b> Company Name : @Html.DisplayFor(Model => item.CompanyName[0])</b>
+            @Html.DisplayFor(Model => item.Year[0])    
+    <ul>
+        <li>
+            @Html.DisplayFor(Model => item.Experience1[0])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience1[1])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience1[2])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience1[3])
+        </li>
+
+
+    </ul>
+    <b>Company Name : @Html.DisplayFor(Model => item.CompanyName[1])</b>
+    @Html.DisplayFor(Model => item.Year[1])
+    <ul>
+        <li>
+            @Html.DisplayFor(Model => item.Experience2[0])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience2[1])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience2[2])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience2[3])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience2[4])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience2[5])
+        </li>
+    </ul>
+    <b>Company Name : @Html.DisplayFor(Model => item.CompanyName[2])</b>
+    @Html.DisplayFor(Model => item.Year[2])
+    <ul>
+        <li>
+            @Html.DisplayFor(Model => item.Experience3[0])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience3[1])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience3[2])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience3[3])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience3[4])
+        </li>
+    </ul>
+    <b>Company Name : @Html.DisplayFor(Model => item.CompanyName[3])</b>
+    @Html.DisplayFor(Model => item.Year[3])
+    <ul>
+        <li>
+            @Html.DisplayFor(Model => item.Experience4[0])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience4[1])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience4[2])
+        </li>
+    </ul>
+    <b> Company Name : @Html.DisplayFor(Model => item.CompanyName[4])</b>
+    @Html.DisplayFor(Model => item.Year[4])
+    <ul>
+        <li>
+            @Html.DisplayFor(Model => item.Experience5[0])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience5[1])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience5[2])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience5[3])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience5[4])
+        </li>
+    </ul>
+    <b>Company Name : @Html.DisplayFor(Model => item.CompanyName[5])</b>
+    @Html.DisplayFor(Model => item.Year[5])
+    <ul>
+        <li>
+            @Html.DisplayFor(Model => item.Experience6[0])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience6[1])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience6[2])
+        </li>
+    </ul>
+    <b>Company Name : @Html.DisplayFor(Model => item.CompanyName[6])</b>
+    @Html.DisplayFor(Model => item.Year[6])
+    <ul>
+        <li>
+            @Html.DisplayFor(Model => item.Experience7[0])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience7[1])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience7[2])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Experience7[3])
+        </li>
+    </ul>
+    <hr />
+    <h6>ACADEMIC CREDENTIALS</h6>
+    <ul>
+        <li>
+            @Html.DisplayFor(Model => item.Academic[0])
+            @Html.DisplayFor(Model => item.Year[7])
+        </li>
+        <li>
+            @Html.DisplayFor(Model => item.Academic[1])
+            @Html.DisplayFor(Model => item.Year[8])
+        </li>
+        </ul>
+    <hr />
+    <h6>INTERESTS</h6>
+    @Html.DisplayFor(Model=>item.Interest)
+
+}
+

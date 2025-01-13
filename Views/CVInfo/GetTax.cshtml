@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MyCVInfo>
+@{
+    ViewData["Title"] = "Tax Calculation";
+}
+<html>
+
+<head>
+    <script>
+        function calculateTax()
+        {
+            var basicsalary = parseFloat(document.getElementById("basicSalary").value);
+            var tax = 0;
+
+            //Note:Personal Allowance: £12,570 is tax-free.
+            if (basicsalary <= 12570)
+            {
+                tax = 0;
+            }
+            else if (basicsalary > 12570 && basicsalary <= 50270)
+            {
+                tax = (basicsalary - 12570) * 0.20;
+
+            }
+            else if (basicsalary > 50270 && basicsalary <= 125140)
+            {
+                tax = (50270 - 12570) * 0.20 + (basicsalary - 50270) * 0.40;
+            }
+            else
+            {
+                tax = (50270 - 12570) * 0.20 + (125140 - 50270) * 0.40 + (basicsalary - 125140) * 0.45;
+            }
+
+            // Display the tax value
+            document.getElementById("taxOutput").innerText = "Tax Payable: £" + tax
+            }
+
+    </script>
+</head>
+<body>
+    ,
+    <table>
+        <tr>
+            <td>@Html.DisplayName("Enter your Basic Salary £ : ")</td>
+
+            <td>
+                <input type="number" id="basicSalary" />
+                <input type="button" id="btncalculate" value="Calculate" onclick="calculateTax()" />
+            </td>
+        <tr>
+
+            <td> <label id="taxOutput"></label> </td>
+        </tr>
+    </table>
+
+</body>
+</html>
